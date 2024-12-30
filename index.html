@@ -9,34 +9,36 @@
 </head>
 
 <body>
-   <section class="min-vh-100 d-flex align-items-center justify-content-center bg-color">
-    <div class="container">
-        <h2 class="heading-1">Sidebar</h2>
-         <button class="btn-1">Open Sidebar</button>
 
-         <div id="sidebar">
-            <div id="sidebar-toggle-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-                </div>
-                <div class="links">
-                    <a href="#">link-1</a>
-                    <a href="#">link-2</a>
-                    <a href="#">link-3</a>
-                    <a href="#">link-4</a>
-                    <a href="#">link-5</a>
-
-                </div>
-
-            </div>
-
-         </div>
+    <div id="mySidebar" class="sidebar">
+        <h1 class="link-side">Sidebar</h1>
+        <a href="#" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#" class="link">Link 1</a>
+        <a href="#" class="link">Link 2</a>
+        <a href="#" class="link">Link 3</a>
+        <a href="#" class="link">Link 4</a>
+        <a href="#" class="link">Link 5</a>
     </div>
+    <section class="d-flex items-center justify-center min-vh-100 flex-column" id="sectionbar">
+        <div id="main">
+            <h1 class="Sidebar">Sidebar</h1>
+            <button class="open-btn" onclick="openNav()">Open Sidebar</button>
+        </div>
+    </section>
 
-   </section>
 
-    <script src="myscripts.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "286px";
+            document.getElementById("sectionbar").style.backgroundColor = "rgba(184 184 184)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
 </body>
 
 </html>
