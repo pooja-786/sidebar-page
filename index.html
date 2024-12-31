@@ -9,17 +9,17 @@
 </head>
 
 <body>
-
-    <div id="mySidebar" class="sidebar">
-        <h1 class="links">Sidebar</h1>
-        <a href="#" class="closebtn" onclick="closeNav()">×</a>
-        <a href="#" class="link">Link 1</a>
-        <a href="#" class="link">Link 2</a>
-        <a href="#" class="link">Link 3</a>
-        <a href="#" class="link">Link 4</a>
-        <a href="#" class="link">Link 5</a>
-    </div>
-    <section class="d-flex items-center justify-center min-vh-100 flex-column" id="sectionbar">
+    <section class="d-flex items-center justify-center min-vh-100 flex-column">
+        <div id="layer" onclick="closeNav()"></div>
+        <div id="mySidebar" class="sidebar">
+            <h1 class="links">Sidebar</h1>
+            <a href="#" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#" class="link">Link 1</a>
+            <a href="#" class="link">Link 2</a>
+            <a href="#" class="link">Link 3</a>
+            <a href="#" class="link">Link 4</a>
+            <a href="#" class="link">Link 5</a>
+        </div>
         <div id="main">
             <h1 class="Sidebar">Sidebar</h1>
             <button class="open-btn" onclick="openNav()">Open Sidebar</button>
@@ -30,12 +30,12 @@
     <script>
         function openNav() {
             document.getElementById("mySidebar").style.width = "286px";
-            document.getElementById("sectionbar").style.backgroundColor = "rgba(184 184 184)";
+            document.getElementById("layer").style.display = "block";
         }
 
         function closeNav() {
             document.getElementById("mySidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("layer").style.display = "none";
         }
     </script>
 
